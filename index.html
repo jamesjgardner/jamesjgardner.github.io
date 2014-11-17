@@ -3,6 +3,62 @@
         <title>GraphTide</title>
     </head>
     <body>
+<style type="text/css">
+
+body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+
+#framecontentLeft, #framecontentRight{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 200px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: navy;
+color: white;
+}
+
+#framecontentRight{
+left: auto;
+right: 0; 
+width: 150px; /*Width of right frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: navy;
+color: white;
+}
+
+#maincontent{
+position: fixed; 
+top: 0;
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+right: 150px; /*Set right value to WidthOfRightFrameDiv*/
+bottom: 0;
+overflow: auto; 
+background: #fff;
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+* html body{ /*IE6 hack*/
+padding: 0 150px 0 200px; /*Set value to (0 WidthOfRightFrameDiv 0 WidthOfLeftFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+</style>
+<div id="main-content" class="maincontent">
         We think about data differently. We organize it in the way it presents itself. Our experts then use this information to help you solve daunting problems only possible with advanced technology. <br/>
 <br/>
 <br/>
@@ -12,5 +68,6 @@ Our experts can help with developing any Scala, Clojure, Java, Perl, Python, C/C
 <br/>
 graphtide@gmail.com<br/>
 512-745-1475<br/>
+</div>
 </body>
 
